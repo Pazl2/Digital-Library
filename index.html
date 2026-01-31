@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DigitalLibrary</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+<header>
+  <div class="header-container">
+    <h1>DigitalLibrary</h1>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Catalog</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+  <!-- Main Layout -->
+  <main>
+
+    <!-- Catalog Section -->
+    <section class="catalog">
+      <h2>Catalog</h2>
+
+<div class="books">
+
+  <div class="book-card" itemscope itemtype="https://schema.org/Product">
+    <img itemprop="image" src="images/book.jpg" alt="Book cover">
+    <p itemprop="name">Book</p>
+
+    <div itemprop="description" class="desc">
+      Interesting book from our library collection.
+    </div>
+
+    <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+      <span itemprop="price">12</span>
+      <span itemprop="priceCurrency">USD</span>
+    </div>
+  </div>
+
+  <div class="book-card" itemscope itemtype="https://schema.org/Product">
+    <img itemprop="image" src="images/book2.png" alt="Book cover">
+    <p itemprop="name">Book</p>
+
+    <div itemprop="description" class="desc">
+      Popular choice among readers.
+    </div>
+
+    <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+      <span itemprop="price">15</span>
+      <span itemprop="priceCurrency">USD</span>
+    </div>
+  </div>
+
+  <div class="book-card" itemscope itemtype="https://schema.org/Product">
+    <img itemprop="image" src="images/book3.png" alt="Book cover">
+    <p itemprop="name">Book</p>
+
+    <div itemprop="description" class="desc">
+      Educational book for students.
+    </div>
+
+    <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+      <span itemprop="price">10</span>
+      <span itemprop="priceCurrency">USD</span>
+    </div>
+  </div>
+
+  <div class="book-card" itemscope itemtype="https://schema.org/Product">
+    <img itemprop="image" src="images/bamboooooo.png " alt="Book cover">
+    <p itemprop="name">Book</p>
+
+    <div itemprop="description" class="desc">
+      New arrival in our catalog.
+    </div>
+
+    <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+      <span itemprop="price">20</span>
+      <span itemprop="priceCurrency">USD</span>
+    </div>
+  </div>
+
+</div>
+
+    </section>
+
+    <!-- Filter Section -->
+    <aside class="filter">
+      <h2>Filter</h2>
+
+      <label>Author</label>
+      <input type="text" placeholder="Enter">
+
+      <label>Name</label>
+      <input type="text" placeholder="Enter">
+
+      <label>Capacity</label>
+      <input type="text" placeholder="Enter">
+
+      <label>Price</label>
+      <input type="text" placeholder="Enter">
+
+      <label>Type</label>
+      <input type="text" placeholder="Enter">
+
+      <button>SEARCH</button>
+    </aside>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 DigitalLibrary — All children reserved.</p>
+  </footer>
+
+</body>
+</html>
