@@ -9,20 +9,17 @@
 - Адаптивный дизайн для мобильных устройств
 
 ## 🛠 Используемые технологии
-- **Frontend**: React, React Router, Axios
-- **Styling**: CSS Modules / Tailwind CSS (уточните по факту)
-- **Backend API**: RESTful API (например, на Express.js или внешний mock-сервер)
-- **Хостинг**: Vercel / Netlify (уточните по факту)
+- **Styling**: CSS Modules 
 - **Дизайн**: [Figma](#figma-макет)
 
 ## 🎨 Figma-макет
-[Figma: Digital Library UI Design](https://www.figma.com/file/ваш-идентификатор/Digital-Library)
+[Figma: Digital Library UI Design](https://www.figma.com/make/VyW377qZZrsnvIhvVkdht3/Digital-Library-Prototype-Design--Community-?p=f&t=DVTJhiwpqeO0SnrM-0)
 
 > ⚠️ Замените ссылку на актуальный макет вашего проекта.
 
 ## 💻 Репозиторий
 Исходный код проекта доступен на GitHub:  
-[GitHub — Digital Library](https://github.com/ваш-логин/digital-library)
+[GitHub — Digital Library](https://github.com/Pazl2/Digital-Library)
 
 > ⚠️ Замените ссылку на реальный URL вашего репозитория.
 
