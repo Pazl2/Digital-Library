@@ -1,0 +1,21 @@
+.footer {
+  background-color: var(--library-dark);
+  color: var(--library-light);
+  padding: var(--spacing-lg) 0;
+  margin-top: auto;
+}
+
+.footer__container {
+  text-align: center;
+}
+
+.footer__text {
+  font-size: var(--font-size-sm);
+  opacity: 0.9;
+  margin-bottom: var(--spacing-sm);
+}
+
+.footer__copyright {
+  font-size: var(--font-size-sm);
+  opacity: 0.8;
+}
