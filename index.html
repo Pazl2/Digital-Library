@@ -2,120 +2,109 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DigitalLibrary</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-<header>
-  <div class="header-container">
-    <h1>DigitalLibrary</h1>
-
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Catalog</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-
-  <main>
-
-    <section class="catalog">
-      <h2>Catalog</h2>
-
-<div class="books">
-
-  <div class="book-card" itemscope itemtype="https://schema.org/Product">
-    <img itemprop="image" src="images/book.jpg" alt="Book cover">
-    <p itemprop="name">Book</p>
-
-    <div itemprop="description" class="desc">
-      Interesting book from our library collection.
+  <a href="#main" class="skip-link">Skip to main content</a>
+  
+  <header class="header">
+    <div class="header__container container">
+      <h1 class="header__logo">DigitalLibrary</h1>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li><a href="#" class="header__nav-link header__nav-link--active">Home</a></li>
+        </ul>
+      </nav>
+      <button class="header__burger" aria-label="Menu">
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+      </button>
     </div>
+  </header>
 
-    <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-      <span itemprop="price">12</span>
-      <span itemprop="priceCurrency">USD</span>
+  <main id="main" class="main">
+    <div class="main__container container">
+      <section class="catalog">
+        <h2 class="catalog__title">Catalog</h2>
+        <div class="catalog__grid">
+          <article class="book-card" itemscope itemtype="https://schema.org/Book">
+            <figure class="book-card__figure">
+              <img src="images/book1.jpg" alt="Book cover of The Great Gatsby" class="book-card__image">
+            </figure>
+            <h3 itemprop="name" class="book-card__title">The Great Gatsby</h3>
+            <div class="book-card__info">
+              <p class="book-card__author">Author: <span itemprop="author">F. Scott Fitzgerald</span></p>
+              <p class="book-card__isbn">ISBN: <span itemprop="isbn">978-0743273565</span></p>
+            </div>
+          </article>
+          
+          <article class="book-card" itemscope itemtype="https://schema.org/Book">
+            <figure class="book-card__figure">
+              <img src="images/book2.jpg" alt="Book cover of To Kill a Mockingbird" class="book-card__image">
+            </figure>
+            <h3 itemprop="name" class="book-card__title">To Kill a Mockingbird</h3>
+            <div class="book-card__info">
+              <p class="book-card__author">Author: <span itemprop="author">Harper Lee</span></p>
+              <p class="book-card__isbn">ISBN: <span itemprop="isbn">978-0060935467</span></p>
+            </div>
+          </article>
+          
+          <article class="book-card" itemscope itemtype="https://schema.org/Book">
+            <figure class="book-card__figure">
+              <img src="images/book3.jpg" alt="Book cover of 1984" class="book-card__image">
+            </figure>
+            <h3 itemprop="name" class="book-card__title">1984</h3>
+            <div class="book-card__info">
+              <p class="book-card__author">Author: <span itemprop="author">George Orwell</span></p>
+              <p class="book-card__isbn">ISBN: <span itemprop="isbn">978-0451524935</span></p>
+            </div>
+          </article>
+          
+          <article class="book-card" itemscope itemtype="https://schema.org/Book">
+            <figure class="book-card__figure">
+              <img src="images/book4.jpg" alt="Book cover of Pride and Prejudice" class="book-card__image">
+            </figure>
+            <h3 itemprop="name" class="book-card__title">Pride and Prejudice</h3>
+            <div class="book-card__info">
+              <p class="book-card__author">Author: <span itemprop="author">Jane Austen</span></p>
+              <p class="book-card__isbn">ISBN: <span itemprop="isbn">978-0141439518</span></p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <aside class="filter">
+        <h2 class="filter__title">Filter</h2>
+        <form class="filter__form">
+          <div class="filter__group">
+            <label for="author" class="filter__label">Author</label>
+            <input type="text" id="author" class="filter__input" placeholder="Enter author name">
+          </div>
+          
+          <div class="filter__group">
+            <label for="name" class="filter__label">Name</label>
+            <input type="text" id="name" class="filter__input" placeholder="Enter book title">
+          </div>
+          
+          <div class="filter__group">
+            <label for="isbn" class="filter__label">ISBN</label>
+            <input type="text" id="isbn" class="filter__input" placeholder="Enter ISBN number">
+          </div>
+          
+          <button type="submit" class="filter__submit">SEARCH</button>
+        </form>
+      </aside>
     </div>
-  </div>
-
-  <div class="book-card" itemscope itemtype="https://schema.org/Product">
-    <img itemprop="image" src="images/book2.png" alt="Book cover">
-    <p itemprop="name">Book</p>
-
-    <div itemprop="description" class="desc">
-      Popular choice among readers.
-    </div>
-
-    <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-      <span itemprop="price">15</span>
-      <span itemprop="priceCurrency">USD</span>
-    </div>
-  </div>
-
-  <div class="book-card" itemscope itemtype="https://schema.org/Product">
-    <img itemprop="image" src="images/book3.png" alt="Book cover">
-    <p itemprop="name">Book</p>
-
-    <div itemprop="description" class="desc">
-      Educational book for students.
-    </div>
-
-    <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-      <span itemprop="price">10</span>
-      <span itemprop="priceCurrency">USD</span>
-    </div>
-  </div>
-
-  <div class="book-card" itemscope itemtype="https://schema.org/Product">
-    <img itemprop="image" src="images/bamboooooo.png " alt="Book cover">
-    <p itemprop="name">Book</p>
-
-    <div itemprop="description" class="desc">
-      New arrival in our catalog.
-    </div>
-
-    <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-      <span itemprop="price">20</span>
-      <span itemprop="priceCurrency">USD</span>
-    </div>
-  </div>
-
-</div>
-
-    </section>
-
-    <aside class="filter">
-      <h2>Filter</h2>
-
-      <label>Author</label>
-      <input type="text" placeholder="Enter">
-
-      <label>Name</label>
-      <input type="text" placeholder="Enter">
-
-      <label>Capacity</label>
-      <input type="text" placeholder="Enter">
-
-      <label>Price</label>
-      <input type="text" placeholder="Enter">
-
-      <label>Type</label>
-      <input type="text" placeholder="Enter">
-
-      <button>SEARCH</button>
-    </aside>
-
   </main>
 
-  <footer>
-    <p>© 2026 DigitalLibrary — All children reserved.</p>
+  <footer class="footer">
+    <div class="footer__container container">
+      <p class="footer__text">Welcome to DigitalLibrary - Your gateway to knowledge and literature</p>
+      <p class="footer__copyright">© 2026 DigitalLibrary. All rights reserved.</p>
+    </div>
   </footer>
-
 </body>
 </html>
