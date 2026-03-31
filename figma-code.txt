@@ -1,0 +1,752 @@
+/* Главное окно */
+
+position: relative;
+width: 1920px;
+height: 1080px;
+
+background: #FFFFFF;
+
+
+/* Группа 1 */
+
+position: absolute;
+width: 1920px;
+height: 1080px;
+left: 0px;
+top: 0px;
+
+
+
+/* хедер */
+
+position: absolute;
+width: 1920px;
+height: 130px;
+left: 0px;
+top: 0px;
+
+
+
+/* Фон хедера */
+
+position: absolute;
+width: 1920px;
+height: 130px;
+left: 0px;
+top: 0px;
+
+background: #322200;
+
+
+/* DigitaLibrary */
+
+position: absolute;
+width: 504px;
+height: 130px;
+left: 0px;
+top: 0px;
+
+font-family: 'jsMath-cmti10';
+font-style: italic;
+font-weight: 500;
+font-size: 72px;
+line-height: 79px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #F5D8A3;
+
+
+
+/* Подвал (фон) */
+
+position: absolute;
+width: 1920px;
+height: 103px;
+left: 0px;
+top: 977px;
+
+background: #4E2C16;
+
+
+/* Группа (каталог + фильтер) */
+
+position: absolute;
+width: 1840px;
+height: 847px;
+left: 80px;
+top: 130px;
+
+
+
+/* Каталог */
+
+position: absolute;
+width: 1028px;
+height: 699px;
+left: 80px;
+top: 175px;
+
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+
+/* Catalog */
+
+position: absolute;
+width: 159px;
+height: 52px;
+left: 80px;
+top: 175px;
+
+font-family: 'jsMath-cmti10';
+font-style: italic;
+font-weight: 500;
+font-size: 48px;
+line-height: 52px;
+
+color: #4C3708;
+
+
+
+/* Книжки */
+
+position: absolute;
+width: 1028px;
+height: 621px;
+left: 80px;
+top: 253px;
+
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+
+/* Книга 4 */
+
+position: absolute;
+width: 440px;
+height: 287px;
+left: 668px;
+top: 587px;
+
+
+
+/* Rectangle 12 */
+
+position: absolute;
+width: 440px;
+height: 287px;
+left: 668px;
+top: 587px;
+
+background: #FFF2DA;
+border-radius: 17px;
+
+
+/* Rectangle 13 */
+
+position: absolute;
+width: 330px;
+height: 212px;
+left: 692px;
+top: 606px;
+
+background: url({A68186EB-9BE0-4167-9497-E12BABFC2992}.png);
+border-radius: 17px;
+
+
+/* Book */
+
+position: absolute;
+width: 70px;
+height: 35px;
+left: 692px;
+top: 824px;
+
+font-family: 'jsMath-cmti10';
+font-style: italic;
+font-weight: 500;
+font-size: 32px;
+line-height: 35px;
+/* identical to box height */
+
+color: #4C3708;
+
+
+
+/* Книга 3 */
+
+position: absolute;
+width: 440px;
+height: 287px;
+left: 80px;
+top: 253px;
+
+
+
+/* Rectangle 12 */
+
+position: absolute;
+width: 440px;
+height: 287px;
+left: 80px;
+top: 253px;
+
+background: #FFF2DA;
+border-radius: 17px;
+
+
+/* Rectangle 13 */
+
+position: absolute;
+width: 330px;
+height: 212px;
+left: 104px;
+top: 272px;
+
+background: url({A68186EB-9BE0-4167-9497-E12BABFC2992}.png);
+border-radius: 17px;
+
+
+/* Book */
+
+position: absolute;
+width: 70px;
+height: 35px;
+left: 104px;
+top: 490px;
+
+font-family: 'jsMath-cmti10';
+font-style: italic;
+font-weight: 500;
+font-size: 32px;
+line-height: 35px;
+/* identical to box height */
+
+color: #4C3708;
+
+
+
+/* Книга 2 */
+
+position: absolute;
+width: 440px;
+height: 287px;
+left: 80px;
+top: 587px;
+
+
+
+/* Rectangle 12 */
+
+position: absolute;
+width: 440px;
+height: 287px;
+left: 80px;
+top: 587px;
+
+background: #FFF2DA;
+border-radius: 17px;
+
+
+/* Rectangle 13 */
+
+position: absolute;
+width: 330px;
+height: 212px;
+left: 104px;
+top: 606px;
+
+background: url({A68186EB-9BE0-4167-9497-E12BABFC2992}.png);
+border-radius: 17px;
+
+
+/* Book */
+
+position: absolute;
+width: 70px;
+height: 35px;
+left: 104px;
+top: 824px;
+
+font-family: 'jsMath-cmti10';
+font-style: italic;
+font-weight: 500;
+font-size: 32px;
+line-height: 35px;
+/* identical to box height */
+
+color: #4C3708;
+
+
+
+/* Книга 1 */
+
+position: absolute;
+width: 440px;
+height: 287px;
+left: 668px;
+top: 253px;
+
+
+
+/* Rectangle 12 */
+
+position: absolute;
+width: 440px;
+height: 287px;
+left: 668px;
+top: 253px;
+
+background: #FFF2DA;
+border-radius: 17px;
+
+
+/* Rectangle 13 */
+
+position: absolute;
+width: 330px;
+height: 212px;
+left: 692px;
+top: 272px;
+
+background: url({A68186EB-9BE0-4167-9497-E12BABFC2992}.png);
+border-radius: 17px;
+
+
+/* Book */
+
+position: absolute;
+width: 70px;
+height: 35px;
+left: 692px;
+top: 490px;
+
+font-family: 'jsMath-cmti10';
+font-style: italic;
+font-weight: 500;
+font-size: 32px;
+line-height: 35px;
+/* identical to box height */
+
+color: #4C3708;
+
+
+
+/* Фильтер */
+
+position: absolute;
+width: 665px;
+height: 847px;
+left: 1255px;
+top: 130px;
+
+
+
+/* Фон фильтра */
+
+position: absolute;
+width: 665px;
+height: 847px;
+left: 1255px;
+top: 130px;
+
+background: #FFEFD0;
+
+
+/* Фильтер 1 */
+
+position: absolute;
+width: 583px;
+height: 772px;
+left: 1291px;
+top: 159px;
+
+
+
+/* Фильтер 2 */
+
+position: absolute;
+width: 583px;
+height: 642px;
+left: 1291px;
+top: 159px;
+
+
+
+/* Filter */
+
+position: absolute;
+width: 117px;
+height: 52px;
+left: 1291px;
+top: 159px;
+
+font-family: 'jsMath-cmti10';
+font-style: italic;
+font-weight: 500;
+font-size: 48px;
+line-height: 52px;
+
+color: #4C3708;
+
+
+
+/* Критерии в фильтре */
+
+position: absolute;
+width: 563px;
+height: 567px;
+left: 1311px;
+top: 234px;
+
+
+
+/* Author */
+
+position: absolute;
+width: 563px;
+height: 95px;
+left: 1311px;
+top: 234px;
+
+
+
+/* Rectangle 14 */
+
+position: absolute;
+width: 563px;
+height: 49px;
+left: 1311px;
+top: 280px;
+
+background: #FFFFFF;
+border-radius: 14px;
+
+
+/* Enter */
+
+position: absolute;
+width: 103px;
+height: 31px;
+left: 1323px;
+top: 289px;
+
+font-family: 'jsMath-cmti10';
+font-style: italic;
+font-weight: 500;
+font-size: 32px;
+line-height: 35px;
+
+color: #BEA46A;
+
+
+
+/* Author */
+
+position: absolute;
+width: 111px;
+height: 39px;
+left: 1311px;
+top: 234px;
+
+font-family: 'jsMath-cmti10';
+font-style: italic;
+font-weight: 500;
+font-size: 36px;
+line-height: 39px;
+
+color: #4C3708;
+
+
+
+/* Name */
+
+position: absolute;
+width: 563px;
+height: 95px;
+left: 1311px;
+top: 352px;
+
+
+
+/* Rectangle 14 */
+
+position: absolute;
+width: 563px;
+height: 49px;
+left: 1311px;
+top: 398px;
+
+background: #FFFFFF;
+border-radius: 14px;
+
+
+/* Enter */
+
+position: absolute;
+width: 103px;
+height: 31px;
+left: 1323px;
+top: 407px;
+
+font-family: 'jsMath-cmti10';
+font-style: italic;
+font-weight: 500;
+font-size: 32px;
+line-height: 35px;
+
+color: #BEA46A;
+
+
+
+/* Name */
+
+position: absolute;
+width: 92px;
+height: 39px;
+left: 1311px;
+top: 352px;
+
+font-family: 'jsMath-cmti10';
+font-style: italic;
+font-weight: 500;
+font-size: 36px;
+line-height: 39px;
+
+color: #4C3708;
+
+
+
+/* Capacity */
+
+position: absolute;
+width: 563px;
+height: 95px;
+left: 1311px;
+top: 470px;
+
+
+
+/* Rectangle 14 */
+
+position: absolute;
+width: 563px;
+height: 49px;
+left: 1311px;
+top: 516px;
+
+background: #FFFFFF;
+border-radius: 14px;
+
+
+/* Enter */
+
+position: absolute;
+width: 103px;
+height: 31px;
+left: 1323px;
+top: 525px;
+
+font-family: 'jsMath-cmti10';
+font-style: italic;
+font-weight: 500;
+font-size: 32px;
+line-height: 35px;
+
+color: #BEA46A;
+
+
+
+/* Capacity */
+
+position: absolute;
+width: 138px;
+height: 39px;
+left: 1311px;
+top: 470px;
+
+font-family: 'jsMath-cmti10';
+font-style: italic;
+font-weight: 500;
+font-size: 36px;
+line-height: 39px;
+
+color: #4C3708;
+
+
+
+/* Price */
+
+position: absolute;
+width: 563px;
+height: 95px;
+left: 1311px;
+top: 588px;
+
+
+
+/* Rectangle 14 */
+
+position: absolute;
+width: 563px;
+height: 49px;
+left: 1311px;
+top: 634px;
+
+background: #FFFFFF;
+border-radius: 14px;
+
+
+/* Enter */
+
+position: absolute;
+width: 103px;
+height: 31px;
+left: 1323px;
+top: 643px;
+
+font-family: 'jsMath-cmti10';
+font-style: italic;
+font-weight: 500;
+font-size: 32px;
+line-height: 35px;
+
+color: #BEA46A;
+
+
+
+/* Price */
+
+position: absolute;
+width: 84px;
+height: 39px;
+left: 1311px;
+top: 588px;
+
+font-family: 'jsMath-cmti10';
+font-style: italic;
+font-weight: 500;
+font-size: 36px;
+line-height: 39px;
+
+color: #4C3708;
+
+
+
+/* Type */
+
+position: absolute;
+width: 563px;
+height: 95px;
+left: 1311px;
+top: 706px;
+
+
+
+/* Rectangle 14 */
+
+position: absolute;
+width: 563px;
+height: 49px;
+left: 1311px;
+top: 752px;
+
+background: #FFFFFF;
+border-radius: 14px;
+
+
+/* Enter */
+
+position: absolute;
+width: 103px;
+height: 31px;
+left: 1323px;
+top: 761px;
+
+font-family: 'jsMath-cmti10';
+font-style: italic;
+font-weight: 500;
+font-size: 32px;
+line-height: 35px;
+
+color: #BEA46A;
+
+
+
+/* Type */
+
+position: absolute;
+width: 79px;
+height: 39px;
+left: 1311px;
+top: 706px;
+
+font-family: 'jsMath-cmti10';
+font-style: italic;
+font-weight: 500;
+font-size: 36px;
+line-height: 39px;
+
+color: #4C3708;
+
+
+
+/* SEARCH */
+
+position: absolute;
+width: 563px;
+height: 84px;
+left: 1311px;
+top: 847px;
+
+
+
+/* Rectangle */
+
+position: absolute;
+width: 563px;
+height: 84px;
+left: 1311px;
+top: 847px;
+
+background: #865939;
+border-radius: 15px;
+
+
+/* SEARCH */
+
+position: absolute;
+width: 407px;
+height: 71px;
+left: 1384px;
+top: 857px;
+
+font-family: 'jsMath-cmti10';
+font-style: italic;
+font-weight: 500;
+font-size: 72px;
+line-height: 79px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #F5D8A3;
+
+
+
+/* Подвал */
+
+position: absolute;
+width: 154px;
+height: 39px;
+left: 40px;
+top: 1009px;
+
+font-family: 'jsMath-cmti10';
+font-style: italic;
+font-weight: 500;
+font-size: 36px;
+line-height: 39px;
+
+color: #FFFFFF;
+

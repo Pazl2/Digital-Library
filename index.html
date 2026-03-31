@@ -5,8 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DigitalLibrary</title>
   <link rel="stylesheet" href="css/styles.css">
+
 </head>
 <body>
+
+
+
   <a href="#main" class="skip-link">Skip to main content</a>
   
   <header class="header">
@@ -73,6 +77,39 @@
               <p class="book-card__isbn">ISBN: <span itemprop="isbn">978-0141439518</span></p>
             </div>
           </article>
+
+          <article class="book-card" itemscope itemtype="https://schema.org/Book">
+            <figure class="book-card__figure">
+              <img src="images/book3.jpg" alt="Book cover of 1984" class="book-card__image">
+            </figure>
+            <h3 itemprop="name" class="book-card__title">Book1</h3>
+            <div class="book-card__info">
+              <p class="book-card__author">Author: <span itemprop="author">pasha1</span></p>
+              <p class="book-card__isbn">ISBN: <span itemprop="isbn">123</span></p>
+            </div>
+          </article>
+
+                    <article class="book-card" itemscope itemtype="https://schema.org/Book">
+            <figure class="book-card__figure">
+              <img src="images/book3.jpg" alt="Book cover of 1984" class="book-card__image">
+            </figure>
+            <h3 itemprop="name" class="book-card__title">Book2</h3>
+            <div class="book-card__info">
+              <p class="book-card__author">Author: <span itemprop="author">pasha2</span></p>
+              <p class="book-card__isbn">ISBN: <span itemprop="isbn">456</span></p>
+            </div>
+          </article>
+
+          <article class="book-card" itemscope itemtype="https://schema.org/Book">
+            <figure class="book-card__figure">
+              <img src="images/book3.jpg" alt="Book cover of 1984" class="book-card__image">
+            </figure>
+            <h3 itemprop="name" class="book-card__title">Book3</h3>
+            <div class="book-card__info">
+              <p class="book-card__author">Author: <span itemprop="author">pasha3</span></p>
+              <p class="book-card__isbn">ISBN: <span itemprop="isbn">789</span></p>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -107,9 +144,9 @@
     </div>
   </footer>
 
-  <script src="js/components/modal.js"></script>
-  <script src="js/script.js"></script>
-  <script src="js/utils/helper.js"></script>
 
+    <script src="js/components/modal.js"></script>
+  <script type="module" src="js/script.js"></script>
+  <script src="js/utils/helper.js"></script>
 </body>
 </html>
