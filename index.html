@@ -1,18 +1,15 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DigitalLibrary</title>
   <link rel="stylesheet" href="css/styles.css">
-
 </head>
 <body>
 
-
-
   <a href="#main" class="skip-link">Skip to main content</a>
-  
+
   <header class="header">
     <div class="header__container container">
       <h1 class="header__logo">DigitalLibrary</h1>
@@ -21,7 +18,7 @@
           <li><a href="#" class="header__nav-link header__nav-link--active">Home</a></li>
         </ul>
       </nav>
-      <button class="header__burger" aria-label="Menu">
+      <button class="header__burger" aria-label="Menu" aria-expanded="false">
         <span class="header__burger-line"></span>
         <span class="header__burger-line"></span>
         <span class="header__burger-line"></span>
@@ -31,10 +28,15 @@
 
   <main id="main" class="main">
     <div class="main__container">
+
       <section class="catalog">
         <h2 class="catalog__title">Catalog</h2>
         <div class="catalog__grid">
-
+          <!-- Загрузчик (скрыт по умолчанию) -->
+          <div id="loading-indicator" role="status" aria-label="Loading books">
+            Loading...
+          </div>
+          <!-- Карточки книг рендерятся через JS -->
         </div>
       </section>
 
@@ -43,22 +45,38 @@
         <form class="filter__form">
           <div class="filter__group">
             <label for="author" class="filter__label">Author</label>
-            <input type="text" id="author" class="filter__input" placeholder="Enter author name">
+            <input type="text" id="author" class="filter__input"
+                   placeholder="Enter author name" autocomplete="off">
           </div>
-          
+
           <div class="filter__group">
             <label for="name" class="filter__label">Name</label>
-            <input type="text" id="name" class="filter__input" placeholder="Enter book title">
+            <input type="text" id="name" class="filter__input"
+                   placeholder="Enter book title" autocomplete="off">
           </div>
-          
+
           <div class="filter__group">
             <label for="isbn" class="filter__label">ISBN</label>
-            <input type="text" id="isbn" class="filter__input" placeholder="Enter ISBN number">
+            <input type="text" id="isbn" class="filter__input"
+                   placeholder="Enter ISBN number">
           </div>
-          
+
           <button type="submit" class="filter__submit">SEARCH</button>
         </form>
+
+        <!-- Кнопки управления кэшем -->
+        <div class="filter__actions">
+          <button id="refresh-btn" class="filter__action-btn"
+                  title="Refresh data from API">
+            ↻ Refresh
+          </button>
+          <button id="clear-cache-btn" class="filter__action-btn filter__action-btn--danger"
+                  title="Clear API cache">
+            🗑 Clear cache
+          </button>
+        </div>
       </aside>
+
     </div>
   </main>
 
@@ -69,9 +87,8 @@
     </div>
   </footer>
 
-
-    <script src="js/components/modal.js"></script>
+  <!-- Единственный тег script — ES module -->
   <script type="module" src="js/script.js"></script>
-  <script src="js/utils/helper.js"></script>
+
 </body>
 </html>
