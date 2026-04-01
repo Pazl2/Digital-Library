@@ -1,5 +1,3 @@
-// js/components/modal.js
-
 export class Modal {
   constructor() {
     this.overlay = null;
@@ -8,7 +6,6 @@ export class Modal {
   }
 
   init() {
-    // Create overlay
     this.overlay = document.createElement('div');
     this.overlay.className = 'modal-overlay';
     this.overlay.setAttribute('role', 'dialog');

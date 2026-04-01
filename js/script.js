@@ -1,8 +1,8 @@
-// js/script.js
-import { debounce, saveToStorage, loadFromStorage } from './utils/helpers.js';
+
+import { debounce, saveToStorage, loadFromStorage } from './utils/helper.js';
 import { modal } from './components/modal.js';
 
-// ─── DATA ────────────────────────────────────────────────────────────────────
+
 
 const BOOKS_DATA = [
   {
@@ -61,7 +61,7 @@ const BOOKS_DATA = [
   }
 ];
 
-// ─── STATE ───────────────────────────────────────────────────────────────────
+
 
 let state = {
   books: BOOKS_DATA,
@@ -73,7 +73,7 @@ let state = {
   autocompleteActive: false,
 };
 
-// ─── DOM REFERENCES ──────────────────────────────────────────────────────────
+
 
 const catalogGrid = document.querySelector('.catalog__grid');
 const authorInput = document.querySelector('#author');
@@ -83,7 +83,7 @@ const filterForm = document.querySelector('.filter__form');
 const headerNav = document.querySelector('.header__nav-list');
 const burgerBtn = document.querySelector('.header__burger');
 
-// ─── RENDER BOOKS ────────────────────────────────────────────────────────────
+
 
 function renderBooks(books) {
   catalogGrid.innerHTML = '';
@@ -109,7 +109,7 @@ function renderBooks(books) {
 
     card.innerHTML = `
       <figure class="book-card__figure">
-        <img src="${book.image}" alt="Book cover of ${book.title}" class="book-card__image" onerror="this.src='images/placeholder.jpg'">
+        <img src="${book.image}" alt="Book cover of ${book.title}" class="book-card__image" onerror="this.src='images/placeholder.png'">
       </figure>
       <h3 itemprop="name" class="book-card__title">${book.title}</h3>
       <div class="book-card__info">
@@ -128,7 +128,6 @@ function renderBooks(books) {
       </div>
     `;
 
-    // Star rating interaction
     const stars = card.querySelectorAll('.star[data-interactive]');
     stars.forEach(star => {
       star.addEventListener('click', () => handleRating(book.id, parseInt(star.dataset.value)));
@@ -143,8 +142,6 @@ function renderBooks(books) {
     catalogGrid.appendChild(card);
   });
 }
-
-// ─── STAR RENDERING ──────────────────────────────────────────────────────────
 
 function renderStars(bookId, currentRating, interactive = true) {
   return Array.from({ length: 5 }, (_, i) => {
@@ -174,11 +171,9 @@ function handleRating(bookId, value) {
   saveToStorage('digitalLibrary_ratings', state.ratings);
   renderBooks(state.filteredBooks);
 
-  // Show toast
   showToast(`You rated "${BOOKS_DATA.find(b => b.id === bookId).title}" ${value} star${value > 1 ? 's' : ''}!`);
 }
 
-// ─── SHELF (FAVOURITES) ──────────────────────────────────────────────────────
 
 function toggleShelf(bookId) {
   const idx = state.shelf.indexOf(bookId);
@@ -193,7 +188,7 @@ function toggleShelf(bookId) {
   renderBooks(state.filteredBooks);
   updateShelfNav();
 
-  // If shelf modal is open, refresh it
+
   if (document.querySelector('.shelf-modal')) openShelfModal();
 }
 
@@ -237,7 +232,7 @@ function updateShelfNav() {
   }
 }
 
-// ─── BOOK DETAIL MODAL ───────────────────────────────────────────────────────
+
 
 function openBookModal(book) {
   const avgRating = getAverageRating(book.id);
@@ -308,7 +303,6 @@ function openBookModal(book) {
     </div>
   `;
 
-  // Shelf button
   container.querySelector('.book-card__btn--shelf').addEventListener('click', () => {
     toggleShelf(book.id);
     const btn = container.querySelector('.book-card__btn--shelf');
@@ -331,7 +325,7 @@ function openBookModal(book) {
     });
   });
 
-  // Review form stars
+
   let selectedRating = 0;
   const reviewStars = container.querySelectorAll('.review-star');
   reviewStars.forEach(star => {
@@ -352,7 +346,7 @@ function openBookModal(book) {
     });
   });
 
-  // Review form submit
+
   container.querySelector('.review-form').addEventListener('submit', (e) => {
     e.preventDefault();
     const name = container.querySelector('#review-name').value.trim();
@@ -375,7 +369,7 @@ function openBookModal(book) {
   modal.open(container);
 }
 
-// ─── AUTOCOMPLETE SEARCH ─────────────────────────────────────────────────────
+
 
 function setupAutocomplete(input, getOptions) {
   let dropdown = null;
@@ -452,7 +446,7 @@ function setupAutocomplete(input, getOptions) {
   input.addEventListener('blur', () => setTimeout(closeDropdown, 150));
 }
 
-// ─── FILTER ───────────────────────────────────────────────────────────────────
+
 
 function filterBooks() {
   const author = authorInput.value.trim().toLowerCase();
@@ -469,7 +463,7 @@ function filterBooks() {
   renderBooks(state.filteredBooks);
 }
 
-// ─── TOAST NOTIFICATION ──────────────────────────────────────────────────────
+
 
 function showToast(message) {
   const existing = document.querySelector('.toast');
@@ -489,10 +483,10 @@ function showToast(message) {
   }, 2500);
 }
 
-// ─── NAV SETUP ───────────────────────────────────────────────────────────────
+
 
 function setupNav() {
-  // Add "My Shelf" nav item
+
   const shelfItem = document.createElement('li');
   shelfItem.className = 'shelf-nav-item';
   shelfItem.innerHTML = `
@@ -506,7 +500,7 @@ function setupNav() {
     openShelfModal();
   });
 
-  // Burger menu
+
   if (burgerBtn) {
     const mobileNav = document.createElement('nav');
     mobileNav.className = 'header__nav header__nav--mobile';
@@ -521,27 +515,27 @@ function setupNav() {
   }
 }
 
-// ─── INIT ────────────────────────────────────────────────────────────────────
+
 
 function init() {
   setupNav();
 
-  // Autocomplete for author and name fields
+
   setupAutocomplete(authorInput, () => state.books.map(b => b.author));
   setupAutocomplete(nameInput, () => state.books.map(b => b.title));
 
-  // Filter form
+
   filterForm.addEventListener('submit', (e) => {
     e.preventDefault();
     filterBooks();
   });
 
-  // Also filter on input for real-time results
+
   [authorInput, nameInput, isbnInput].forEach(input => {
     input.addEventListener('input', debounce(filterBooks, 300));
   });
 
-  // Initial render
+
   renderBooks(state.filteredBooks);
 }
 
